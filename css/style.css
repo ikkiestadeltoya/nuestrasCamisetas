@@ -1,0 +1,427 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* VARIABLES */
+:root {
+
+    /* PALETTE */
+    --primary:#ffff;
+    --terciary: #0e2031;
+    --secondary:#3498db;
+    /* --terciary: #37fd94; */
+    --shadow: #0f0f0f;
+
+
+/* FONT SIZES */
+    --text-xxl : 5em;   /* los em toman el valor en cuenta del navegador. Es RELATIVO al tamanio del navegador */
+    --text-xl : 3.6em;
+    --text-lg : 3.2em;
+    --text-md : 2.2em;
+    --text-sm : 1.6em;
+    --text-xs : 1.2em;
+
+
+/* SPACINGS */
+    --sp-xxl: 12rem;
+    --sp-xl: 8rem;
+    --sp-lg: 5rem;
+    --sp-md: 3.2rem;  
+    --sp-sm: 1.6rem;  
+    --sp-xs: 0.8rem;    
+}
+
+/* NORMALIZO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* tamanio de cajas, cuando es BB, el tamanio de la caja va a ser el mismo, el padding se mete para adentro. Content se suman */
+}
+
+
+html {
+    font-family: 62.5%;
+}
+
+
+ul{
+    list-style-type: none; /* SACO PUNTOS, creo */
+}
+
+a{
+    text-decoration: none; /* SACO SUBRAYADO */
+    /* font-size: var(--text-xs) */;     
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary);
+}
+
+
+.container{
+    max-width: 1400px; /* LAS CAJAS, VAN A TENER UN ANCHO DE 1200 MAXIMO */
+    margin: 0 auto;  /* Los margenes de los costados los calcula automatico, en 0 del eje X */
+}
+
+
+/* HEADER */
+header{
+    font-family: "Montserrat";
+    background-color: var(--secondary);
+    padding: var(--sp-xs);
+}
+
+.navbar{
+    display: flex;
+    justify-content: center ;
+    flex-direction: column; 
+ /* flex-flow: column nowrap; */
+    padding-top: 15px;
+}
+
+
+.navbar__link{  /*caja con imagen prediseniada
+    /* display: inline-block; */   /* PONE EN LINEA ELEMENTOS */
+    display: flex; /*pongo este display BLOCK porque es etiqueta en linea y no tomaria el maximo de ancho*/
+    justify-content: center;
+    /* flex-flow: row nowrap; */
+  /*   height: 100px;
+    width: 50px; */
+    padding: 0px;
+}
+
+.lineasLogo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{  /* imagen prediseniada */
+    width: 30%; 
+}
+
+.p_nav{
+    font-size: var(--text-lg);
+    font-family: "Montserrat";
+    font-weight: 900;
+    color: var(--primary);
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+/* .navbar */ .menu {   /*CONJUNTO DE LINKS
+    /* display: inline-block; */
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.7em;
+    /* margin: 5px 10px; */
+}
+
+/* /* .navbar .menu .menu__item */  /*NO HAY MODIFICACIONES
+    /* display: inline-block; */
+    /* display: flex; */ 
+
+
+.menu__link {  /* CADA LINK */
+    color: var(--primary); /* COLOR DEL LINK */
+    transition: all .4s ease-in-out, color .4s ease-in-out;
+    font-weight: 600;
+}
+
+.menu__link:hover{
+    /* background-color: var(--secondary); */
+    color: var(--terciary);
+    border-radius: 10%;
+}
+
+/* -----------///// BODY //////////------------- */
+
+
+
+body{    
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Esto lo pongo para que salga bien HEAD BODY y FOOTER*/
+    min-height: 100vh;  
+    
+}
+
+.titulo{  /* TITULO PARA VARIAS PAGINAS */
+    font-family: "Montserrat";
+    font-size: var(--text-lg);
+    padding-top: 0.3em; 
+}
+
+
+/* ---------///////////FOOTER///////////--------- */
+footer{
+    display:block;
+    color: var(--secondary);
+    font-family: "Montserrat";
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* ---------///////////INDEX///////////--------- */
+
+.container_index{
+    background-image: url(../img/pexels-gonzalo-acuña-10923070.jpg);
+    padding: var(--sp-sm);  /* LE DOY PADDING AL CONTENDIO */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1400px; /* LAS CAJAS, VAN A TENER UN ANCHO DE 1200 MAXIMO */
+    margin: 0 auto;  /* Los margenes de los costados los calcula automatico, en 0 del eje X */
+}
+
+.container_func{
+    background-image: none;
+    padding: var(--sp-sm);  /* LE DOY PADDING AL CONTENDIO */
+   /*  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    max-width: 1400px; /* LAS CAJAS, VAN A TENER UN ANCHO DE 1200 MAXIMO */
+    margin: 0 auto;  /* Los margenes de los costados los calcula automatico, en 0 del eje X */
+}
+
+
+main {
+    background-image: url(../img/blur.png);
+    padding: var(--sp-sm);  /* LE DOY PADDING AL CONTENDIO */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.p_main{
+    font-size: var(--text-xxl);
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: var(--primary);
+}
+
+
+.p_sec{
+    font-size: var(--text-xs);
+    font-family: "Montserrat";
+    color: var(--primary);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.btn-buy{
+    padding: 0.2em;
+    background-color: var(--secondary); 
+    font-family: "Montserrat";
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    font-size: var(--text-xs);
+    box-shadow: 0px 10px 10px -10px var(--shadow);
+    
+}
+
+.btn_link{
+    color: var(--primary);
+}
+
+.btn-buy:hover{    
+    background-color: var(--terciary);
+}
+
+.btn_link:hover{
+    color: var(--secondary);
+    }
+
+
+
+
+/* ---------///////////PRODUCTOS///////////--------- */
+
+.galeria{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.primerosProd{
+    /* flex-direction: row; */  /* DUDA DE PORQUE NO ME QUEDA */
+    text-shadow: black 0.1em 0.1em 0.2em;
+    flex-direction: row;
+}
+
+.segundoProd{
+    /* flex-direction: row;  */  /* DUDA DE PORQUE NO ME QUEDA */
+    text-shadow: black 0.1em 0.1em 0.2em;
+    flex-direction: row;
+    
+}
+
+.hombrePic{
+    width: 200px;
+    box-shadow: 2px 2px 5px var(--shadow)
+}
+
+.hombre{
+    padding: 1em;
+}
+
+.damaPic{
+    width: 200px;
+    box-shadow: 2px 2px 5px var(--shadow)
+}
+
+.dama{
+    padding: 1em;
+}
+
+.kidsPic{
+    width: 200px ;
+    box-shadow: 2px 2px 5px var(--shadow)
+}
+
+.kids{
+    padding: 1em;
+}
+
+.especialPic{
+    width: 200px;
+    box-shadow: 2px 2px 5px var(--shadow)
+}
+
+.especial{
+    padding: 1em;
+}
+
+.productoData{
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* ---------///////////FUNCIONA///////////--------- */
+
+.p_mainf{ font-size: var(--text-xxl);
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: var(--secondary);
+}
+
+.p_funciona{
+    font-size: var(--text-sm);
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: var(--terciary);
+}
+
+.lista_funciona{
+    line-height: 2em;
+    font-size: var(--text-xs);
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: var(--terciary);
+}
+
+/* ---------///////////CAMBIOS///////////--------- */
+
+.p_main3{
+    font-size: var(--text-md);
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.p_main4{
+    font-size: var(--text-sm);
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.p_main5{
+    font-size: var(--text-md);
+    font-family: "Montserrat";
+    font-weight: 900;
+    color: var(--primary);
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.p_cambio{
+    font-size: var(--text-xs);
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: var(--primary);
+    text-align: justify;
+
+}
+
+
+/* ---------///////////CONTACTO///////////--------- */
+
+.p_main2{
+    font-size: var(--text-xl);
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: var(--primary);
+}
+
+
+.formulario{
+    font-size: var(--text-md);
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: var(--primary);
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.enviar{
+    font-size: var(--text-md);
+}
+
+/* ---------///////////MEDIA QUERY///////////--------- */
+
+/* .container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
